@@ -7,6 +7,7 @@ require '../vendor/core/Router.php';
 require '../vendor/libs/functions.php';
 require '../app/controllers/Main.php';
 require '../app/controllers/Posts.php';
+require '../app/controllers/PostsNews.php';
 
 
 // Router::add('posts/add', ['controller'=>'Posts','action'=>'add']);

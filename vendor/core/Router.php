@@ -45,13 +45,17 @@ class Router{
         }
         return false;
     }
-
+    /**
+     * 
+     * вызывается метод создания класса
+     */
     public static function dispatch($url)
     {
         if (self::matchRoute($url)) {
-            $controller = self::$route['controller'];
+            $controller = self::upperCamelCase (self::$route['controller']);
+            self::upperCamelCase($controller);
             if (class_exists($controller)) {
-                echo 'ok';
+                $cObj = new $controller;
             } else {
                 echo"Контроллер  <b> $controller </b> не найден";
             }
@@ -60,6 +64,14 @@ class Router{
             http_response_code(404);
             include '404.html';
         }
+    }
+
+    protected static function upperCamelCase($name)
+    {
+        // $name = ucwords($name); переводит первую букыу в строе в заглавную
+        
+        return str_replace(' ', '', ucwords(str_replace('-', ' ', $name )));
+        
     }
 
 
