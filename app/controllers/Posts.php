@@ -2,8 +2,20 @@
 
 
 class Posts {
-    public function __construct()
+    public function index()
     {
-        echo "Posts::_construct";
+        echo "Posts::index";
     }
+
+
+    
+    public function test()
+    {
+        echo "test";
+    }
+    public function testPage()
+    {
+        echo "testPage";
+    }
+
 }

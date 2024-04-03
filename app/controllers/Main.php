@@ -2,8 +2,17 @@
 
 
 class Main {
-    public function __construct()
+    public function index()
     {
-        echo "Main::_construct";
+        echo "Main::index";
     }
+    public function test()
+    {
+        echo "test";
+    }
+    public function testPage()
+    {
+        echo "testPage";
+    }
+
 }

@@ -56,6 +56,13 @@ class Router{
             self::upperCamelCase($controller);
             if (class_exists($controller)) {
                 $cObj = new $controller;
+                $action = self::$route['action'];
+                if (method_exists($cObj, $action)) {
+                    $cObj -> $action();
+                } else {
+                    echo"Метод <b> $controller::$action </b> не найден";
+                }
+                
             } else {
                 echo"Контроллер  <b> $controller </b> не найден";
             }

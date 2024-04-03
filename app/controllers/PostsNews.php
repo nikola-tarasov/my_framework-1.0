@@ -3,9 +3,18 @@
 class PostsNews{
 
 
-    public function __construct()
+    public function index()
     {
-        echo "PostsNews::_construct";
+        echo "PostsNews::index";
+    }
+
+    public function test()
+    {
+        echo "test";
+    }
+    public function testPage()
+    {
+        echo "testPage";
     }
 
 }
