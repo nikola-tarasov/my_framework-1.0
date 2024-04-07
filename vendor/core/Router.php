@@ -56,7 +56,8 @@ class Router{
             self::upperCamelCase($controller);
             if (class_exists($controller)) {
                 $cObj = new $controller;
-                $action = self::$route['action'];
+                $action = self::loverCamelCase(self::$route['action']) . 'Action';
+                debug($action);
                 if (method_exists($cObj, $action)) {
                     $cObj -> $action();
                 } else {
@@ -80,6 +81,16 @@ class Router{
         return str_replace(' ', '', ucwords(str_replace('-', ' ', $name )));
         
     }
+
+    protected static function loverCamelCase($name)
+    {
+        
+        
+        return lcfirst(self::upperCamelCase($name));
+        
+    }
+
+
 
 
 

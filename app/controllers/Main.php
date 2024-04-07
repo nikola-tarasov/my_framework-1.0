@@ -2,17 +2,17 @@
 
 
 class Main {
-    public function index()
+    public function indexAction()
     {
         echo "Main::index";
     }
-    public function test()
+    public function testAction()
     {
-        echo "test";
+        echo "Main::test";
     }
-    public function testPage()
+    public function testPageAction()
     {
-        echo "testPage";
+        echo "Main::testPage";
     }
 
 }

@@ -2,20 +2,24 @@
 
 
 class Posts {
-    public function index()
+    public function indexAction()
     {
         echo "Posts::index";
     }
 
 
     
-    public function test()
+    public function testAction()
     {
-        echo "test";
+        echo "Posts::test";
     }
-    public function testPage()
+    public function testPageAction()
     {
-        echo "testPage";
+        echo "Posts::testPage";
     }
 
+    public function before()
+    {
+        echo "Posts::before";
+    }
 }

@@ -3,18 +3,18 @@
 class PostsNews{
 
 
-    public function index()
+    public function indexAction()
     {
-        echo "PostsNews::index";
+        echo "PostsNews::indexAction";
     }
 
-    public function test()
+    public function testAction()
     {
-        echo "test";
+        echo "PostsNews::test";
     }
-    public function testPage()
+    public function testPageAction()
     {
-        echo "testPage";
+        echo "PostsNews::testPage";
     }
 
 }
