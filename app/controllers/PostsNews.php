@@ -1,5 +1,9 @@
 <?php
 
+
+namespace app\controllers;
+
+
 class PostsNews{
 
 
